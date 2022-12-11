@@ -1,0 +1,100 @@
+#DO NOT TOUCH THIS SETTING
+config-version: 14
+
+disable-outdated-config-warning: false
+
+# Messages for better messages commands
+internal-messages:
+  prefix: "[&bBetterMessages&r] "
+  help-redirect: "&bType \"/bm help\" for help"
+  reloaded: "&bConfig has been reloaded"
+  help: "&bCommands\n- /bettermessages help: Brings you here!\n- /bettermessages reload: Reloads the config!"
+  changed-message: "&bChanged message {message}"
+
+messages:
+  join:
+    enabled: true
+
+    # List of counts when the message will work, if  you add 5 it will send
+    # it on the fifth join (or whatever the event is)
+    # Set to -1 to disable
+    count:
+      - -1
+
+    # The permission required for the message to be run
+    # Set to "none" to disable
+    permission: false
+
+    # The message to be sent, supports hex and bukkit colour codes
+    # Making it a list will randomise messages all with an equal chance
+    message:
+      - '&f&l{player} &eзашел на сервер!'
+
+    # The audience is who the message is sent to
+    # Options
+    # server - everyone in the server
+    # world - everyone in the world the player is currently in. Doesn't work on the leave event
+    # world/{world} - specify a world to send the messages to
+    # user - the player that activated the event/message
+    audience: server
+
+    # The activation is when the message is run, just what event
+    # Options
+    # join
+    # quit
+    # world-change/{from}/{to} - replace {to} and {from} with the to and from world names
+    activation:
+      - join
+
+    # This sets where the plugin will get the join, quit etc count from
+    # This does not change where the world change count is gotten from
+    # Options
+    # default - this is the default option, it will use the count stored by the plugin
+    # server - the count will be used from server statistics (join/leave stats)
+    storage-type: default
+
+    # How long should the message be delayed in ticks
+    # 20 ticks = 1 second
+    # Default is 0
+    delay: 0
+
+    # Commands to run when the event runs. Run as the console
+    # Disabled by default
+    #commands:
+      #- give {player} diamond 1
+  first-join:
+    enabled: true
+    count:
+      - 1
+    permission: false
+    message: '&eДобро пожаловать на тестовый сервер!'
+    audience: server
+    activation:
+      - join
+    storage-type: default
+    delay: 0
+  quit:
+    enabled: true
+    count:
+      - -1
+    permission: false
+    message: '&f&l{player} &eВышел :('
+    audience: server
+    activation:
+      - quit
+    storage-type: default
+    delay: 0
+  entered-nether:
+    enabled: false
+    count:
+      - -1
+    permission: false
+    message: '&f&l{player} &eentered the nether, be careful!'
+    audience: server
+    activation:
+      - world-change/world/world_nether
+    storage-type: default
+    delay: 0
+
+    # If the world the player enters when they join is this one then the message will not be sent
+    world: world_nether
