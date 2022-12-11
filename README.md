@@ -5,7 +5,7 @@
 * Emotecraft (позволяет использовать эмоции на сервере)
 * plasmovoice (голосовой чат)
 * ProtocolLib (библиотека, позволяющая читать и писать данные в протокол Minecraft)
-* FastAsyncWorldEdit-Bukkit (редактор мира)
+* FastAsyncWorldEdit (редактор мира)
 * spw-rp-plugin (плагин от [_Teleport](https://github.com/teleport2), позволяет загружать ресурспаки пользователям с помощью команды /rp)
 * GSit (команды /sit и /lay)
 * BetterMessages (показывает сообщения о входе/выходе с сервера)
