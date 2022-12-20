@@ -37,7 +37,7 @@
 
 ## Настройка spw-rp-plugin
 
-Плагин spw-rp-plugin загружает ресурспак пользователю после использования команды `/rp`. Чтобы настроить этот плагин, нужно открыть файл `/plugins/spw-rp-plugin/config.yml` и вставить свою ссылку на ресурспак в параметр `resource_pack_url`:
+Плагин spw-rp-plugin загружает ресурспак пользователю после использования команды `/rp`. Чтобы настроить этот плагин, нужно открыть файл `/plugins/SPWorlds-resource-pack-plugin/config.yml` и вставить свою ссылку на ресурспак в параметр `resource_pack_url`:
 
 ```yml
 resource_pack_url: https://spworlds.city/spw.zip
